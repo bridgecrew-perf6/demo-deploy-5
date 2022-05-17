@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="nav-item nav-link" routerLink="/">Home</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="nav-item nav-link" routerLink="/followers">Followers</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -13,6 +13,7 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
 import { GithubFollowersService } from './github-followers/github-followers.service';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { CoursesComponent } from './courses/courses.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpModule } from '@angular/http';
     HomeComponent,
     GithubFollowersComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

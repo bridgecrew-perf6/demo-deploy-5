@@ -1,0 +1,113 @@
+{
+  "rulesDirectory": [
+    "tools/tslint",
+    "node_modules/@angular/dev-infra-private/tslint-rules",
+    "node_modules/vrsource-tslint-rules/rules",
+    "node_modules/tslint-eslint-rules/dist/rules",
+    "node_modules/tslint-no-toplevel-property-access/rules"
+  ],
+  "rules": {
+    "ts-node-loader": true,
+    "require-internal-with-underscore": true,
+    "no-implicit-override-abstract": true,
+    "validate-import-for-esm-cjs-interop": [
+      true,
+      {
+        "noNamedExports": [
+          "typescript",
+          "minimist",
+          "magic-string",
+          "semver",
+          "yargs",
+          "glob",
+          "cluster",
+          "convert-source-map"
+        ],
+        "noDefaultExport": [],
+        "incompatibleModules": {
+          "@babel/core": "This module is incompatible with the ESM/CJS interop. Use the custom interop file.",
+          "@babel/types": "This module is incompatible with the ESM/CJS interop. Use the custom interop file and import the `types` namespace."
+        }
+      }
+    ],
+    "eofline": true,
+    "file-header": [
+      true,
+      {
+        "match": "Copyright Google LLC",
+        "allow-single-line-comments": false,
+        "default": "@license\nCopyright Google LLC All Rights Reserved.\n\nUse of this source code is governed by an MIT-style license that can be\nfound in the LICENSE file at https://angular.io/license"
+      }
+    ],
+    "no-console": [true, "log"],
+    "no-construct": true,
+    "no-duplicate-imports": true,
+    "no-duplicate-variable": true,
+    "no-var-keyword": true,
+    "prefer-literal": [true, "object"],
+    "no-toplevel-property-access": [
+      true,
+      "packages/animations/src/",
+      "packages/animations/browser/",
+      "packages/common/src/",
+      "packages/core/src/",
+      "packages/elements/src/",
+      "packages/forms/src/",
+      "packages/platform-browser/src/",
+      "packages/router/src/"
+    ],
+    "semicolon": [true],
+    "variable-name": [true, "ban-keywords"],
+    "no-inner-declarations": [true, "function"],
+    "no-debugger": true,
+    "ban": [
+      true,
+      { "name": "fdescribe", "message": "Don't keep jasmine focus methods." },
+      { "name": "fit", "message": "Don't keep jasmine focus methods." }
+    ]
+  },
+  "jsRules": {
+    "ts-node-loader": true,
+    "require-internal-with-underscore": true,
+
+    "eofline": true,
+    "file-header": [
+      true,
+      {
+        "match": "Copyright Google LLC",
+        "allow-single-line-comments": false,
+        "default": "@license\nCopyright Google LLC All Rights Reserved.\n\nUse of this source code is governed by an MIT-style license that can be\nfound in the LICENSE file at https://angular.io/license"
+      }
+    ],
+    "no-console": [true, "log"],
+    "no-duplicate-imports": true,
+    "no-duplicate-variable": true,
+    "semicolon": [true],
+    "variable-name": [true, "ban-keywords"],
+    "no-inner-declarations": [true, "function"],
+    "ban": [
+      true,
+      { "name": "fdescribe", "message": "Don't keep jasmine focus methods." },
+      { "name": "fit", "message": "Don't keep jasmine focus methods." }
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "**/node_modules/**/*",
+      "./aio/**/*",
+      "./integration/**/*",
+      "./built/**/*",
+      "./dist/**/*",
+      "./bazel-out/**/*",
+      "**/*.externs.js",
+      "./packages/compiler-cli/test/compliance/test_cases/**/*",
+      "./packages/localize/**/test_files/**/*",
+      "./tools/public_api_guard/**/*.d.ts",
+      "./modules/benchmarks_external/**/*",
+      "./packages/zone.js/**/*",
+
+      "./devtools/bazel-out/**/*",
+      "./devtools/projects/ng-devtools/src/lib/vendor/**/*"
+    ]
+  }
+}
